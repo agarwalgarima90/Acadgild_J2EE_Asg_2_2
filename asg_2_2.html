@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Assignment 2_1 </title>
+		<script>
+			function outerFunction(func) {
+				
+				func();
+			}
+
+			function innerFunction() {
+				console.log("Hello World From Inner Function");
+			}
+			outerFunction(innerFunction);
+
+			var counter = (function() {
+				var counter = 1;
+				return function() {
+					return counter++;
+				}
+			})();
+
+			console.log("First time: " + counter());
+			console.log("Second time: " + counter());
+			console.log("Third time: " + counter());
+		</script>
+	</head>
+</html>
